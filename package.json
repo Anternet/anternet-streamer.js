@@ -1,0 +1,41 @@
+{
+  "name": "anternet-streamer",
+  "version": "0.0.0",
+  "description": "Anternet library for streaming large data chunks over UDP protocol.",
+  "keywords": [
+    "p2p",
+    "udp",
+    "anternet",
+    "peer",
+    "stream",
+    "streamer",
+    "streaming"
+  ],
+  "main": "streamer.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Moshe Simantov <ms@development.co.il> (https://github.com/moshest)",
+  "license": "MIT",
+  "dependencies": {
+    "anternet": ">=0.3.1"
+  },
+  "peerDependencies": {
+    "anternet": ">=0.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "mocha": "^2.4.5",
+    "mocha-eslint": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Anternet/anternet-streammer.js.git"
+  }
+}
