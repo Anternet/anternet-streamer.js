@@ -27,10 +27,10 @@ anternet.on(msgType, (rid, args, rinfo) => {
   const filePath = args[0];
   
   // create a new source only if not exists already
-  const source = streammer.get(filePath, path => Source.fromFile(path));
+  const source = streamer.get(filePath, path => Source.fromFile(path));
   
   // create a private referance for this peer
-  const ref = streammer.stream(source, rinfo.port, rinfo.address, {start: 10, end: 8000});
+  const ref = streamer.stream(source, rinfo.port, rinfo.address, {start: 10, end: 8000});
 
   // send the referance back to the peer
   anternet.response(rid, [ref], rinfo.port, rinfo.address);
@@ -45,7 +45,7 @@ anternet.request(msgType, ['foo.js'], port, address, (err, args, rinfo) => {
   if (err) throw err;
 
   const ref = args[0];
-  streammer.read(ref, port, address).pipe(process.stdout);
+  streamer.read(ref, port, address).pipe(process.stdout);
 });
 ```
 
